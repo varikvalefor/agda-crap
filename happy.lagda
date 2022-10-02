@@ -84,6 +84,10 @@ ni'o go la'o zoi.\ \texttt{∈2 k} .zoi.\ gi pa da xi pa zo'u pa da xi re zo'u l
 
 ni'o la'o zoi.\ \texttt{digits' 0 x} .zoi.\ du la'oi .\texttt{x}.\ .i ganai ge la'oi .\texttt{n2}.\  velvi'u ko'a goi lo romoi be lo'i ro me'oi .digit.\ be la'oi .\texttt{n}.\ be'o be'o la'oi .\texttt{n}.\ gi la'oi .\texttt{x2}.\ ve jmina la'oi .\texttt{x}.\ ko'a gi la'o zoi.\ \texttt{digits' n x} .zoi.\ du la'o zoi.\ \texttt{digits' n2 x2} .zoi.
 
+.i me'oi .terminate.\ ni'i le nu ge ganai la'o zoi.\ \texttt{n div 10} .zoi.\ du li no ja cu mleca la'oi .\texttt{n}. gi la'oi .\texttt{digits'}.\ me'oi .terminate.\ gi la'o zoi.\ \texttt{n div 10} .zoi.\ du li no ja cu mleca la'oi .\texttt{n}.  .i ku'i le te samrkompli cu xlabebna je cu na jimpe le du'u la'oi .\texttt{digits'}.\ me'oi .terminate.
+
+.i cumki fa lo nu xamgu fa lo nu da'i la'oi .\texttt{digits'}.\ binxo zo'e poi ke'a goi ko'a zo'u le te samrkompli cu jimpe le du'u ko'a me'oi .terminate.
+
 \begin{code}
 {-# TERMINATING #-}
 digits' : ℕ → List ℕ → List ℕ
