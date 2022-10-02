@@ -92,7 +92,7 @@ ni'o la'o zoi.\ \texttt{digits' 0 x} .zoi.\ du la'oi .\texttt{x}.\ .i ganai ge l
 {-# TERMINATING #-}
 digits' : ℕ → List ℕ → List ℕ
 digits' 0 xs = xs
-digits' (suc n) xs = digits' ((suc n) div 10) $ (suc n) % 10 ∷ xs
+digits' n xs = digits' (n div 10) $ n % 10 ∷ xs
 \end{code}
 
 \section{la'oi .\texttt{digits}.}
