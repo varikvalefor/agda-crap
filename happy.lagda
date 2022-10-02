@@ -20,6 +20,7 @@
 \newunicodechar{≡}{\ensuremath{\mathnormal\equiv}}
 \newunicodechar{⟩}{\ensuremath{\mathnormal\rangle}}
 \newunicodechar{∶}{\ensuremath{\mathnormal\colon\!\!}}
+\newunicodechar{ᵇ}{\ensuremath{^\textrm{b}}}
 
 \title{le me'oi .agdalicious. me'oi .implementation.\ be lo fancu be lo rarna'u bei lo'i me'oi .boolean.\ bei le su'u go jetnu gi lo me'oi .input.\ cu mu'oi glibau.\ happy number .glibau.}
 \author{la .varik.\ .VALefor.}
