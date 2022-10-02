@@ -61,25 +61,6 @@ bool a b false = a
 bool a b true = b
 \end{code}
 
-\begin{code}
---data List (A : Set) : Set where
---  _∷_ : A → List A → List A
---  [] : List A
---
---_++_ : {A : Set} → List A → List A → List A
---[] ++ t = t
---t ++ [] = t
---(x ∷ xs) ++ ys = x ∷ (xs ++ ys)
---
---map : {A : Set} → {B : Set} → (A → B) → List A → List B
---map f [] = []
---map f (x ∷ xs) = (f x) ∷ (map f xs)
---
---foldr : {A : Set} → {B : Set} → (A → B → B) → B → List A → B
---foldr f o [] = o
---foldr f o (x ∷ xs) = foldr f (f x o) xs
-\end{code}
-
 \section{la'oi .\texttt{conq}.}
 
 \begin{code}
