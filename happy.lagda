@@ -40,7 +40,7 @@ ni'o lo nu pilno la'oi .\texttt{\$}.\ cu filri'a lo nu na pilno lo me'oi
 .parenthesis.
 
 \begin{code}
-_$_ : {A : Set} → {B : Set} → (A → B) → A → B
+_$_ : {A B : Set} → (A → B) → A → B
 a $ b = a b
 infixr 1 _$_
 \end{code}
