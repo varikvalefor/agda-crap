@@ -27,8 +27,11 @@
 \newunicodechar{◆}{\ensuremath{\mathnormal\blackdiamond}}
 \newunicodechar{∸}{\ensuremath{\mathnormal\dotdiv}}
 \newunicodechar{ᵇ}{\ensuremath{^\mathrm{b}}}
-\newunicodechar{≥}{\ensuremath{\mathnormal{≥}}}
-\newunicodechar{ϕ}{\textrm\phi}
+\newunicodechar{≥}{\ensuremath{\mathnormal{\geq}}}
+\newunicodechar{ϕ}{\ensuremath{\mathnormal{\phi}}}
+\newunicodechar{χ}{\ensuremath{\mathnormal{\chi}}}
+\newunicodechar{∧}{\ensuremath{\mathnormal{\wedge}}}
+\newunicodechar{∅}{\ensuremath{\mathnormal{\emptyset}}}
 \newunicodechar{∣}{\ensuremath{\mathnormal{|}}}
 \newunicodechar{⁇}{\ensuremath{\mathrm{?\!?}}}
 
