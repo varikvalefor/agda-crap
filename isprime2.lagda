@@ -272,6 +272,6 @@ ni'o la'o zoi.\ \texttt{f⊹ n} .zoi.\ liste lo'i mulna'usle ku poi se gripi'i l
 \begin{code}
 {-# TERMINATING #-}
 𝕗⊹ : ℕ → List ℕ
-𝕗⊹ n = bool (conqMap 𝕗⊹ (/-𝕗 n ∷ (-𝕗 n ∷ []))) (n ∷ []) $ ℙ⁇ n
+𝕗⊹ n = bool (conqMap 𝕗⊹ $ 𝕗² n) (n ∷ []) $ ℙ⁇ n
 \end{code}
 \end{document}
