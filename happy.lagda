@@ -108,25 +108,20 @@ ds : ℕ → ℕ
 ds n = sum $ map (λ t → t ^ 2) $ digits n
 \end{code}
 
-\section{la'oi .\texttt{dsl'}.}
-ni'o la'oi .\texttt{dsl'}.\ me'oi .helper.\ fancu la'oi .\texttt{dsl}.
+\section{la'oi .\texttt{dsl}.}
+
+ni'o la'o zoi.\ \texttt{dsl n} .zoi.\ liste ko'a goi lo grisumji be lo'i ro kurtenfa be lo'i ro me'oi .digit.\ poi pagbu la'oi .\texttt{n}.\ ge'u je lo grisubji be lo'i ro kurtenfa be lo'i ro me'oi .digit.\ poi pagbu la'oi ko'a be'o je zo'e
 
 .i le mu'oi glibau. termination checker .glibau. cu tolnei  .i ku'i je'a me'oi .terminate. ki'u le nu la'o zoi. ds n .zoi. mleca jo nai dunli la'oi .n.
 
 \begin{code}
 {-# TERMINATING #-}
-dsl' : List ℕ → List ℕ
-dsl' [] = []
-dsl' (x ∷ xs) = if ∈2 (x ∷ xs) then xs else dsl' (ds x ∷ x ∷ xs)
-\end{code}
-
-\section{la'oi .\texttt{dsl}.}
-
-ni'o la'o zoi.\ \texttt{dsl n} .zoi.\ liste ko'a goi lo grisumji be lo'i ro kurtenfa be lo'i ro me'oi .digit.\ poi pagbu la'oi .\texttt{n}.\ ge'u je lo grisubji be lo'i ro kurtenfa be lo'i ro me'oi .digit.\ poi pagbu la'oi ko'a be'o je zo'e
-
-\begin{code}
 dsl : ℕ → List ℕ
 dsl n = dsl' $ n ∷ []
+  where
+  dsl' : List ℕ → List ℕ
+  dsl' [] = []
+  dsl' (x ∷ xs) = if ∈2 (x ∷ xs) then xs else dsl' (ds x ∷ x ∷ xs)
 \end{code}
 
 \section{la'o zoi.\ ∶⟩ .zoi.}
