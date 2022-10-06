@@ -80,7 +80,7 @@ ni'o go la'o zoi.\ \texttt{∈2 k} .zoi.\ gi pa da xi pa zo'u pa da xi re zo'u l
 ∈2 (x ∷ xs) = (x ∈ xs) ∨ (∈2 xs)
 \end{code}
 
-\section{la'oi .\texttt{digits'}.}
+\section{la'oi .\texttt{digits}.}
 ni'o la'o zoi.\ \texttt{digits n} .zoi.\ liste lo me'oi .digit.\ poi pagbu la'oi .\texttt{n}.
 
 .i la'oi .\texttt{digits}.\ me'oi .terminate.\ ni'i le nu ganai la'oi .\texttt{digits'}.\ me'oi .terminate.\ gi la'oi .\texttt{digits}.\ me'oi .terminate.\ kei je le nu ge ganai la'o zoi.\ \texttt{n div 10} .zoi.\ du li no ja cu mleca la'oi .\texttt{n}.\ gi la'oi .\texttt{digits'}.\ me'oi .terminate.\ gi la'o zoi.\ \texttt{n div 10} .zoi.\ du li no ja cu mleca la'oi .\texttt{n}.  .i ku'i le te samrkompli cu xlabebna je cu na jimpe le du'u la'oi .\texttt{digits'}.\ me'oi .terminate.
