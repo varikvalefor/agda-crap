@@ -148,4 +148,3 @@ main : Main
 main = run $ getNum >>= maybe′ (IO.List.mapM′ pih ∘ ℕ↑) (pure tt)
 \end{code}
 \end{document}
-/
