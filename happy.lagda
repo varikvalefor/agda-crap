@@ -11,8 +11,6 @@
 
 % \setmathfont{XITS Math}
 \newunicodechar{λ}{\ensuremath{\mathnormal\lambda}}
-\newunicodechar{∃}{\ensuremath{\mathnormal\exists}}
-\newunicodechar{∄}{\ensuremath{\mathnormal\nexists}}
 \newunicodechar{∷}{\ensuremath{\mathnormal\Colon}}
 \newunicodechar{∨}{\ensuremath{\mathnormal\vee}}
 \newunicodechar{ℕ}{\ensuremath{\mathbb{N}}}
@@ -43,23 +41,6 @@ ni'o lo nu pilno la'oi .\texttt{\$}.\ cu filri'a lo nu na pilno lo me'oi
 _$_ : {A B : Set} → (A → B) → A → B
 a $ b = a b
 infixr 1 _$_
-\end{code}
-
-\section{la'o zoi.\ \texttt{∃} .zoi.}
-ni'o go la'o zoi.\ \texttt{∃ p x} .zoi.\ jetnu gi la'oi .\texttt{x}.\ vasru zo'e poi ke'a goi la'oi .\texttt{a}.\ zo'u la'o zoi.\ \texttt{p a} .zoi.\ jetnu
-
-\begin{code}
-∃ : {A : Set} → (A → Bool) → List A → Bool
-∃ p [] = false
-∃ p (x ∷ xs) = (p x) ∨ (∃ p xs)
-\end{code}
-
-\section{la'o zoi.\ \texttt{∄} .zoi.}
-ni'o go la'o zoi.\ \texttt{∄ p x} .zoi.\ jetnu gi la'oi .\texttt{x}.\ na vasru zo'e poi ke'a goi la'oi .\texttt{a}.\ zo'u la'o zoi.\ \texttt{p a} .zoi.\ jetnu
-
-\begin{code}
-∄ : {A : Set} → (A → Bool) → List A → Bool
-∄ p xs = not (∃ p xs)
 \end{code}
 
 \section{la'o zoi.\ \texttt{∈} .zoi.}
