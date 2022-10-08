@@ -126,32 +126,13 @@ ni'o go la'o zoi.\ \texttt{∶⟩ n} .zoi.\ jetnu gi la'oi .\texttt{n}.\ mu'oi g
 ∶⟩ n = 1 ∈ (dsl n)
 \end{code}
 
-\section{la'oi .\texttt{read}.}
-ni'o la'oi .\texttt{read}.\ cu se sabji la'oi .GHC.\ je cu se pilno fi lo nu me'oi .parse.\ lo me'oi .\texttt{String}. poi vasru lo kacna'u
-
-\begin{code}
-postulate read : String → ℕ
-{-# COMPILE GHC read = read . Data.Text.unpack #-}
-\end{code}
-
-\section{la'oi .\texttt{read?}.}
-ni'o gonai ge la'oi .\texttt{n}.\ vasru lo degji po'o gi la'o zoi.\ \texttt{read? n} .zoi.\ me'oi .\texttt{just}.\ kacna'u je cu se skicu la'oi .\texttt{n}.\ gi la'oi .\texttt{n}.\ me'oi .\texttt{nothing}.
-
-\begin{code}
-read? : String → Maybe ℕ
-read? n = if isReadable n then just (read n) else nothing
-  where
-  isReadable : String → Bool
-  isReadable = all isDigit ∘ toList
-\end{code}
-
 \section{la'oi .\texttt{getNum}.}
 ni'o la'oi .\texttt{getNum}.\ gonai me'oi .just. kacna'u je cu se tcidu fi le mu'oi glibau. standard input .glibau.\ gi me'oi .nothing.
 
 \begin{code}
 {-# TERMINATING #-}
 getNum : IO (Maybe ℕ)
-getNum = read? <$> getLine
+getNum = readMaybe 10 <$> getLine
 \end{code}
 
 \section{la'oi .\texttt{pih}.}
