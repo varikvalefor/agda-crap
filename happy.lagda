@@ -147,6 +147,9 @@ pih : ∀ {a} → ℕ → IO {a} ⊤
 pih Q = if ∶⟩ Q then putStrLn (show Q) else return tt
 \end{code}
 
+\section{la'oi .\texttt{main}}
+ni'o ganai co'e zo'oi .\texttt{main}.\ gi ganai lo terpinsle poi vasru poi vasru lo me'oi .digit.\ po'o je poi sinxa ko'a goi lo kacna'u gi ciska lo'i mu'oi glibau.\ happy number .glibau.\ poi mleca ja dunli ko'a ku'o lo mu'oi glibau.\ standard output .glibau.
+
 \begin{code}
 main : Main
 main = run $ getNum >>= maybe′ (IO.List.mapM′ pih ∘ ℕ↑) (pure tt)
