@@ -222,7 +222,7 @@ ni'o la'o zoi.\ \texttt{1ℙ> n} .zoi.\ to'e traji fo lo'i mulna'usle poi zmadu 
 \begin{code}
 {-# TERMINATING #-}
 1ℙ> : ℕ → ℕ
-1ℙ> n = 1ℙ>' n (n + 1)
+1ℙ> n = 1ℙ>' n $ n + 1
   where
   1ℙ>' : ℕ → ℕ → ℕ
   1ℙ>' n m = if ℙ⁇ m then m else 1ℙ>' n (suc m)
