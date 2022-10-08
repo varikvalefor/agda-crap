@@ -1,4 +1,4 @@
-\documentclass{article}
+\documentclass{article}∘
 
 \usepackage{ar}
 \usepackage[bw]{agda}
@@ -27,10 +27,19 @@
 \maketitle
 
 \begin{code}
+{-# OPTIONS --guardedness #-}
+
+open import IO
+open import Function
 open import Data.Nat
 open import Data.Bool
-open import Data.List
+open import Data.Nat.Show
 open import Data.Nat.DivMod
+open import Data.Unit.Polymorphic
+open import Data.Char using (isDigit)
+open import Data.List hiding (fromMaybe)
+open import Data.String using (String; toList)
+open import Data.Maybe using (Maybe; maybe′; just; nothing)
 \end{code}
 
 \section{la'o zoi.\ \texttt{\$} .zoi.}
@@ -38,9 +47,12 @@ ni'o lo nu pilno la'oi .\texttt{\$}.\ cu filri'a lo nu na pilno lo me'oi
 .parenthesis.
 
 \begin{code}
-_$_ : {A B : Set} → (A → B) → A → B
-a $ b = a b
-infixr 1 _$_
+ℕ↑ : ℕ → List ℕ
+ℕ↑ n = reverse $ ℕ↓ n
+  where
+  ℕ↓ : ℕ → List ℕ
+  ℕ↓ 0 = 0 ∷ []
+  ℕ↓ (suc n) = suc n ∷ ℕ↓ n
 \end{code}
 
 \section{la'o zoi.\ \texttt{∈} .zoi.}
@@ -113,4 +125,46 @@ ni'o go la'o zoi.\ \texttt{∶⟩ n} .zoi.\ jetnu gi la'oi .\texttt{n}.\ mu'oi g
 ∶⟩ : ℕ → Bool
 ∶⟩ n = 1 ∈ (dsl n)
 \end{code}
+
+\section{la'oi .\texttt{read}.}
+ni'o la'oi .\texttt{read}.\ cu se sabji la'oi .GHC.\ je cu se pilno fi lo nu me'oi .parse.\ lo me'oi .\texttt{String}. poi vasru lo kacna'u
+
+\begin{code}
+postulate read : String → ℕ
+{-# COMPILE GHC read = read . Data.Text.unpack #-}
+\end{code}
+
+\section{la'oi .\texttt{read?}.}
+ni'o gonai ge la'oi .\texttt{n}.\ vasru lo degji po'o gi la'o zoi.\ \texttt{read? n} .zoi.\ me'oi .\texttt{just}.\ kacna'u je cu se skicu la'oi .\texttt{n}.\ gi la'oi .\texttt{n}.\ me'oi .\texttt{nothing}.
+
+\begin{code}
+read? : String → Maybe ℕ
+read? n = if isReadable n then just (read n) else nothing
+  where
+  isReadable : String → Bool
+  isReadable = all isDigit ∘ toList
+\end{code}
+
+\section{la'oi .\texttt{getNum}.}
+ni'o la'oi .\texttt{getNum}.\ gonai me'oi .just. kacna'u je cu se tcidu fi le mu'oi glibau. standard input .glibau.\ gi me'oi .nothing.
+
+\begin{code}
+{-# TERMINATING #-}
+getNum : IO (Maybe ℕ)
+getNum = read? <$> getLine
+\end{code}
+
+\section{la'oi .\texttt{pih}.}
+ni'o gonai ge la'oi .\texttt{n}.\ mu'oi glibau.\ happy number .glibau.\ gi ganai co'e ko'a goi zoi zoi.\ \texttt{pih n} .zoi.\ gi lo nu jmina la'oi .\texttt{n}.\ je lo me'oi .newline.\ lo mu'oi glibau.\ standard output .glibau.\ gi ganai co'e ko'i gi me'oi .noop.
+
+\begin{code}
+pih : ∀ {a} → ℕ → IO {a} ⊤
+pih Q = if ∶⟩ Q then putStrLn (show Q) else return tt
+\end{code}
+
+\begin{code}
+main : Main
+main = run $ getNum >>= maybe′ (IO.List.mapM′ pih ∘ ℕ↑) (pure tt)
+\end{code}
 \end{document}
+/
