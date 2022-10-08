@@ -24,7 +24,7 @@
 \newunicodechar{∘}{\ensuremath{\mathnormal\circ}}
 \newunicodechar{ᵇ}{\ensuremath{^\textrm{b}}}
 
-\title{le me'oi .agdalicious. me'oi .implementation.\ be lo fancu be lo rarna'u bei lo'i me'oi .boolean.\ bei le su'u go jetnu gi lo me'oi .input.\ cu mu'oi glibau.\ happy number .glibau.}
+\title{le me'oi .agdalicious.\ me'oi .implementation.\ be lo fancu be lo rarna'u bei lo'i me'oi .boolean.\ bei le su'u go jetnu gi lo me'oi .input.\ cu mu'oi glibau.\ happy number .glibau.}
 \author{la .varik.\ .VALefor.}
 
 \begin{document}
@@ -109,7 +109,7 @@ ds n = sum $ map (λ t → t ^ 2) $ digits n
 
 ni'o la'o zoi.\ \texttt{dsl n} .zoi.\ liste ko'a goi lo grisumji be lo'i ro kurtenfa be lo'i ro me'oi .digit.\ poi pagbu la'oi .\texttt{n}.\ ge'u je lo grisubji be lo'i ro kurtenfa be lo'i ro me'oi .digit.\ poi pagbu la'oi ko'a be'o je zo'e
 
-.i le mu'oi glibau. termination checker .glibau. cu tolnei  .i ku'i je'a me'oi .terminate. ki'u le nu la'o zoi. ds n .zoi. mleca jo nai dunli la'oi .n.
+.i le mu'oi glibau.\ termination checker .glibau.\ cu tolnei  .i ku'i je'a me'oi .terminate.\ ki'u le nu la'o zoi.\ ds n .zoi.\ mleca jo nai dunli la'oi .n.
 
 \begin{code}
 {-# TERMINATING #-}
@@ -131,7 +131,7 @@ ni'o go la'o zoi.\ \texttt{∶⟩ n} .zoi.\ jetnu gi la'oi .\texttt{n}.\ mu'oi g
 \end{code}
 
 \section{la'oi .\texttt{getNum}.}
-ni'o la'oi .\texttt{getNum}.\ gonai me'oi .just. kacna'u je cu se tcidu fi le mu'oi glibau. standard input .glibau.\ gi me'oi .nothing.
+ni'o la'oi .\texttt{getNum}.\ gonai me'oi .just.\ kacna'u je cu se tcidu fi le mu'oi glibau.\ standard input .glibau.\ gi me'oi .nothing.
 
 \begin{code}
 {-# TERMINATING #-}
