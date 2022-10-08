@@ -18,6 +18,10 @@
 \newunicodechar{≡}{\ensuremath{\mathnormal\equiv}}
 \newunicodechar{⟩}{\ensuremath{\mathnormal\rangle}}
 \newunicodechar{∶}{\ensuremath{\mathnormal\colon\!\!}}
+\newunicodechar{∀}{\ensuremath{\mathnormal\forall}}
+\newunicodechar{′}{\ensuremath{\mathnormal\prime}}
+\newunicodechar{⊤}{\ensuremath{\mathnormal\top}}
+\newunicodechar{∘}{\ensuremath{\mathnormal\circ}}
 \newunicodechar{ᵇ}{\ensuremath{^\textrm{b}}}
 
 \title{le me'oi .agdalicious. me'oi .implementation.\ be lo fancu be lo rarna'u bei lo'i me'oi .boolean.\ bei le su'u go jetnu gi lo me'oi .input.\ cu mu'oi glibau.\ happy number .glibau.}
