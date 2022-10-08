@@ -1,4 +1,4 @@
-\documentclass{article}∘
+\documentclass{article}
 
 \usepackage{ar}
 \usepackage[bw]{agda}
